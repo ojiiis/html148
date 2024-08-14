@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="console.log('concole log after the body display')">
+    body
+</body>
+
+<script>
+//     var hey = function(x){
+//     console.log(`Hello world from ${x}`)
+//    }
+//    const hey = () =>{
+
+//    }
+//    function hey(){
+    
+//    }
+
+// var obj = {
+//    hello:"world",
+//    talk:function(x){
+//     console.log(`Hello world from ${x}`)
+//    }
+// }
+
+var list = ["a","b","c","d","e"]
+
+function obj(arr){
+    if(arr && arr.length == 0 || !arr) throw "Empty array is not allowed";
+   
+    const app = {
+        thisIndex:0,
+        getCurrentIndex:()=>{
+        return app.thisIndex;
+        },
+        nextIndex:()=>{
+            app.thisIndex = app.thisIndex + 1;
+            return arr[app.thisIndex]
+        },
+        prevIndex:()=>{
+            app.thisIndex = app.thisIndex - 1;
+            return arr[app.thisIndex]
+        }
+    }
+return app;   
+}
+// const a = obj(list);
+// var next = a.nextIndex()
+// while(next != "e"){
+//     console.log(next)
+//     next = a.nextIndex()
+// }
+//console.log(a.nextIndex())
+//onsole.log(a.prevIndex())
+
+
+var b = document.createElement('div')
+var c = document.createElement('a')
+c.href = "google.com"
+c.innerText = "click me"
+b.innerHTML = "Hello world"
+b.append(c)
+document.body.append(b)
+//console.log()
+</script>
+</html>
